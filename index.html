@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AL-ABKAN COMPUTER SCIENCE LIBRARY</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+\* {
+
+margin: 0;
+
+padding: 0;
+
+box-sizing: border-box;
+
+}
+
+body {
+
+font-family: Arial, sans-serif;
+
+background: #f4f6f9;
+
+color: #333;
+
+line-height: 1.6;
+
+}
+
+.hero {
+
+background: linear-gradient(rgba(0,0,80,0.85), rgba(0,0,80,0.85)),
+
+url('library-bg.jpg') center/cover no-repeat;
+
+color: white;
+
+text-align: center;
+
+padding: 60px 20px;
+
+}
+
+.logo {
+
+width: 100px;
+
+height: 100px;
+
+border-radius: 50%;
+
+background: white;
+
+padding: 10px;
+
+margin-bottom: 15px;
+
+}
+
+.hero h1 {
+
+font-size: 2.2rem;
+
+margin-bottom: 10px;
+
+}
+
+.hero p {
+
+font-size: 1.1rem;
+
+margin-bottom: 20px;
+
+}
+
+.theme-btn {
+
+background: white;
+
+color: darkblue;
+
+border: none;
+
+padding: 10px 18px;
+
+border-radius: 8px;
+
+font-weight: bold;
+
+cursor: pointer;
+
+}
+
+nav {
+
+background: #001f66;
+
+display: flex;
+
+justify-content: center;
+
+flex-wrap: wrap;
+
+padding: 12px;
+
+}
+
+nav a {
+
+color: white;
+
+text-decoration: none;
+
+margin: 8px 15px;
+
+font-weight: bold;
+
+}
+
+.search-container {
+
+text-align: center;
+
+margin: 25px auto;
+
+width: 90%;
+
+max-width: 600px;
+
+}
+
+#searchInput {
+
+width: 100%;
+
+padding: 14px;
+
+border: 2px solid darkblue;
+
+border-radius: 10px;
+
+font-size: 16px;
+
+}
+
+.intro {
+
+text-align: center;
+
+padding: 20px;
+
+max-width: 900px;
+
+margin: auto;
+
+}
+
+.courses {
+
+padding: 40px 20px;
+
+max-width: 1100px;
+
+margin: auto;
+
+}
+
+.courses h2 {
+
+text-align: center;
+
+margin-bottom: 25px;
+
+color: darkblue;
+
+}
+
+.course-grid {
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+gap: 20px;
+
+}
+
+.course-card {
+
+background: white;
+
+padding: 20px;
+
+border-radius: 12px;
+
+text-align: center;
+
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+}
+
+.course-card h3 {
+
+color: darkblue;
+
+margin-bottom: 10px;
+
+}
+
+.btn {
+
+display: inline-block;
+
+margin-top: 12px;
+
+padding: 10px 16px;
+
+background: darkblue;
+
+color: white;
+
+text-decoration: none;
+
+border-radius: 8px;
+
+font-weight: bold;
+
+}
+
+.quick-links {
+
+background: white;
+
+padding: 40px 20px;
+
+margin-top: 30px;
+
+}
+
+.quick-links h2 {
+
+text-align: center;
+
+color: darkblue;
+
+margin-bottom: 20px;
+
+}
+
+.quick-grid {
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+gap: 20px;
+
+max-width: 900px;
+
+margin: auto;
+
+}
+
+.quick-card {
+
+background: #f4f6f9;
+
+padding: 25px;
+
+text-align: center;
+
+border-radius: 12px;
+
+text-decoration: none;
+
+color: darkblue;
+
+font-weight: bold;
+
+box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+}
+
+footer {
+
+background: #111;
+
+color: white;
+
+text-align: center;
+
+padding: 25px;
+
+margin-top: 40px;
+
+}
+
+.dark-mode {
+
+background: #121212;
+
+color: white;
+
+}
+
+.dark-mode .course-card,
+
+.dark-mode .quick-links,
+
+.dark-mode .quick-card {
+
+background: #1f1f1f;
+
+color: white;
+
+}
+
+.dark-mode .course-card h3,
+
+.dark-mode .courses h2,
+
+.dark-mode .quick-links h2 {
+
+color: #7db4ff;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="hero">
+
+<img src="logo.png" alt="Library Logo" class="logo">
+
+<h1>AL-ABKAN COMPUTER SCIENCE LIBRARY</h1>
+
+<p>Learn • Practice • Succeed</p>
+
+<button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+
+</header>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="notes.html">Lecture Notes</a>
+
+<a href="books.html">Books</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<div class="search-container">
+
+<input type="text" id="searchInput" placeholder="Search lecture notes...">
+
+</div>
+
+<section class="intro">
+
+<h2>Welcome to AL-ABKAN COMPUTER SCIENCE LIBRARY</h2>
+
+<p>
+
+This digital library was created to help ND1 Computer Science
+
+students access lecture notes and study materials easily.
+
+</p>
+
+</section>
+
+<section class="courses">
+
+<h2>First Semester Courses</h2>
+
+<div class="course-grid">
+
+<div class="course-card"><h3>COM111</h3><p>Introduction to Computer Science</p><a href="COM111.html" class="btn">Read Notes</a></div>
+
+<div class="course-card"><h3>COM112</h3><p>Computer Applications</p><a href="COM112.html" class="btn">Read Notes</a></div>
+
+<div class="course-card"><h3>COM113</h3><p>Programming Fundamentals</p><a href="COM113.html" class="btn">Read Notes</a></div>
+
+<div class="course-card"><h3>COM114</h3><p>Statistics for Computing I</p><a href="COM114.html" class="btn">Read Notes</a></div>
+
+<div class="course-card"><h3>COM115</h3><p>Computer Hardware Basics</p><a href="COM115.html" class="btn">Read Notes</a></div>
+
+<div class="course-card"><h3>GNS101</h3><p>Use of English</p><a href="GNS101.html" class="btn">Read Notes</a></div>
+
+<div class="course-card"><h3>GNS127</h3><p>Citizenship Education</p><a href="GNS127.html" class="btn">Read Notes</a></div>
+
+<div class="course-card"><h3>MTH111</h3><p>Logic and Linear Algebra</p><a href="MTH111.html" class="btn">Read Notes</a></div>
+
+</div>
+
+</section>
+
+<section class="quick-links">
+
+<h2>Quick Access</h2>
+
+<div class="quick-grid">
+
+<a href="notes.html" class="quick-card">📘 Lecture Notes</a>
+
+<a href="books.html" class="quick-card">📚 Books</a>
+
+<a href="contact.html" class="quick-card">📞 Contact</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>&copy; 2026 AL-ABKAN COMPUTER SCIENCE LIBRARY</p>
+
+<p>Developed by Abdulaziz Adam Kankara</p>
+
+</footer>
+
+<script>
+
+const themeToggle = document.getElementById('themeToggle');
+
+themeToggle.addEventListener('click', () => {
+
+document.body.classList.toggle('dark-mode');
+
+if(document.body.classList.contains('dark-mode')) {
+
+themeToggle.textContent = '☀️ Light Mode';
+
+} else {
+
+themeToggle.textContent = '🌙 Dark Mode';
+
+}
+
+});
+
+const searchInput = document.getElementById('searchInput');
+
+const cards = document.querySelectorAll('.course-card');
+
+searchInput.addEventListener('keyup', function() {
+
+const filter = this.value.toLowerCase();
+
+cards.forEach(card => {
+
+const text = card.textContent.toLowerCase();
+
+card.style.display = text.includes(filter) ? 'block' : 'none';
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
